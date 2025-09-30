@@ -13,6 +13,10 @@ int main() {
             number = number * 10 + (str[i] - '0');
         } else {
             printf("Error: non-numeric character found '%c'\n", str[i]);
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF);
+            printf("\nPress Enter to exit...");
+            getchar();
             return 1;
         }
         i++;
